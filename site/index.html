@@ -39,10 +39,11 @@
             parallax();
         });
     </script>
-
+<script> BootstrapDialog.alert('I want banana!');</script>
 </head>
 
 <body id="page-top" class="index">
+
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -69,17 +70,16 @@
            <!-- conteudo menu para as versões web, e mobile -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <form class=" form-inline" method="POST" action="login.php">
+                    <form class=" form-inline" method="POST" action="../config/login.php">
                        <input type="text" class="form-control " placeholder="login" id="login" name="login" required="" data-validation-required-message="Por favor, digite seu login." aria-invalid="false">
                          <input type="password" class="form-control" placeholder="Senha" id="senha" name="senha" required="" data-validation-required-message="Por favor, digite seu login." aria-invalid="false">
-                       <input class="btn btn-default" type="submit" value="entrar" id="entrar" name="entrar">
+                       <input class="btn" type="submit" value="entrar" id="entrar" name="entrar">
                     </form>
-                    <a   href="cadastro.html">Cadastre-se</a>
+                    <a style="text-decoration:none"data-toggle="modal" href="#myModal" data-target="#myModal">Cadastre-se</a>
                 </ul>                                                 
             </div>
         </div>
     </nav>
-
     <!-- Header -->
     <header>
         <div class="container">
@@ -100,6 +100,26 @@
         </div>
     </header>
 
+    <!-- modal para cadastro -->
+    <div id="myModal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title">Formulário de cadastro</h4>
+          </div>
+          <div class="modal-body">
+            <form method="POST" action="../conifg/cadastro.php">
+                 <input type="text" class="form-control " placeholder="login" id="login" name="login" required="" data-validation-required-message="Por favor, digite seu login." aria-invalid="false">
+                 <input type="password" class="form-control" placeholder="senha" id="senha" name="senha" required="" data-validation-required-message="Por favor, digite seu login." aria-invalid="false">
+                 <div class="g-recaptcha" data-sitekey="6Lf0nR0TAAAAADuh1Wy3CAMY4DKy--zTX2Yxz5NQ"></div><br>
+                <input class="btn btn-success btn-lg" type="submit" value="Cadastrar" id="cadastrar" name="cadastrar">
+            </form>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+   
     <!--parallax 1 -->
     <section id="faixa" class="bg-1 text-center"></br></br>
       <h1>Porque amamos de compartilhar!</h1>
@@ -240,6 +260,7 @@
 
 
 
+<script src='https://www.google.com/recaptcha/api.js'></script>
 
     <!-- jQuery -->
     <script src="../view/js/jquery.js"></script>
