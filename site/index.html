@@ -47,40 +47,37 @@
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
+                <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Barra</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#page-top">Filme do dia</a>
+                </button>     
+                <!-- apenas para as versões web -->
+                 <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-left">
+                        <ul class="nav navbar-nav">
+                        <li> <a href="filme.php">Filme</a></li>
+                        <li><a href="serie.php">Série</a> </li>
+                        <li class="page-scroll"><a href="#about">Sobre</a></li>
+                        <li class="page-scroll"> <a href="#contact">Contato</a></li>
+                    </ul>
+                </div>       
             </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
+           <!-- conteudo menu para as versões web, e mobile -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a href="filme.php">Filme</a>
-                    </li>
-                    <li>
-                        <a href="serie.php">Série</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#about">Sobre</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#contact">Contato</a>
-                    </li>
-                </ul>
+                    <form class=" form-inline" method="POST" action="login.php">
+                       <input type="text" class="form-control " placeholder="login" id="login" name="login" required="" data-validation-required-message="Por favor, digite seu login." aria-invalid="false">
+                         <input type="password" class="form-control" placeholder="Senha" id="senha" name="senha" required="" data-validation-required-message="Por favor, digite seu login." aria-invalid="false">
+                       <input class="btn btn-default" type="submit" value="entrar" id="entrar" name="entrar">
+                    </form>
+                    <a   href="cadastro.html">Cadastre-se</a>
+                </ul>                                                 
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container-fluid -->
     </nav>
 
     <!-- Header -->
